@@ -1,4 +1,5 @@
 "use client"
+
 import FoodSelector from "./component/FoodSelector";
 
 export default function Home() {
