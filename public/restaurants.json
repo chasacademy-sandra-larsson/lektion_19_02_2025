@@ -1,0 +1,46 @@
+{
+    "data": [
+        {
+            "name": "Restaurang 1",
+            "tags": ["Södermalm", "Asiatisk", "Frukost"]
+        },
+        {
+            "name": "Restaurang 2",
+            "tags": ["Norrmalm", "Italiensk", "Lunch"]
+        },
+        {
+            "name": "Restaurang 3",
+            "tags": ["Östermalm", "Mexikansk", "Middag"]
+        },
+
+        {
+            "name": "Restaurang 4",
+            "tags": ["Gamla Stan", "Indisk", "Annat"]
+        },
+        {
+            "name": "Restaurang 5",
+            "tags": ["Kungsholmen", "Fransk", "Bar"]
+        },
+        {
+            "name": "Restaurang 6",
+            "tags": ["Södermalm", "Asiatisk", "Frukost"]
+        },
+        {
+            "name": "Restaurang 7",
+            "tags": ["Norrmalm", "Italiensk", "Lunch"]
+        },
+        {
+            "name": "Restaurang 8",
+            "tags": ["Östermalm", "Mexikansk", "Middag"]
+        },
+        {
+            "name": "Restaurang 9",
+            "tags": ["Gamla Stan", "Indisk", "Annat"]
+        },
+        {
+            "name": "Restaurang 10",
+            "tags": ["Kungsholmen", "Fransk", "Bar"]
+        }
+    ]
+}
+
