@@ -2,11 +2,6 @@
 /* eslint-disable */
 "use client"
 
-import { useDispatch, useSelector } from 'react-redux'
-import { RootState } from '../redux/store'
-import { updatePlace, updateEat, updateMeal } from '../redux/slices/foodSelectionSlice'
-import { useGetRestaurantsQuery } from '../redux/services/restaurantsAPI'
-
 
 const places = [
     "Södermalm",
