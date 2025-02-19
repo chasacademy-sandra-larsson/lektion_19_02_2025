@@ -39,7 +39,7 @@ function FoodSelector() {
 
 
     // Här blir något fel...
-    // const filteredData = data?.restaurants?.filter((item: Restaurant) => {
+    // const filteredData = data.restaurants.filter((item: Restaurant) => {
     //     return item.tags.includes(foodState.place) && item.tags.includes(foodState.cuisine) && item.tags.includes(foodState.meal);
     // })
 
@@ -100,9 +100,9 @@ function FoodSelector() {
             </div>
             <div>
                     {/* Filtered restaurants */}
-                    {/* {filteredData?.map((item: Restaurant) => {
-                        <div key={item.name}>{item.name}</div>
-                    })} */}
+                    {/* {filteredData?.map((restaurant: Restaurant) => (
+                    <div key={restaurant.name}>{restaurant.name}</div>
+                ))} */}
             </div>
         </div>
     )

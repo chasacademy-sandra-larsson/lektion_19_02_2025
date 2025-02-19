@@ -1,15 +1,19 @@
 import { configureStore } from "@reduxjs/toolkit";
 import foodSelectionReducer from './slices/foodSelectionSlice'
+import  currencyConverterReducer from "./slices/currencyConverterSlice";
 import { restaurantApi } from "./services/restaurantsAPI";
+import { currencyApi } from "./services/currencyAPI";
 
 
 export const store = configureStore({
     reducer: {
         foodSelection: foodSelectionReducer,
+        currencyConverter: currencyConverterReducer,
         [restaurantApi.reducerPath]: restaurantApi.reducer,
+        [currencyApi.reducerPath]: currencyApi.reducer
     },
     middleware: (getDefaultMiddleware) =>
-        getDefaultMiddleware().concat(restaurantApi.middleware),
+        getDefaultMiddleware().concat(restaurantApi.middleware, currencyApi.middleware),
   })
   
   // Infer the `RootState` and `AppDispatch` types from the store itself
