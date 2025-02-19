@@ -7,7 +7,7 @@ export const restaurantApi = createApi({
   reducerPath: 'restarantsApi',
   baseQuery: fetchBaseQuery({ baseUrl: '/' }),
   endpoints: (builder) => ({
-    getRestaurants: builder.query({
+    getRestaurants: builder.query<void, void>({
       query: () => 'restaurants.json',
     }),
   }),

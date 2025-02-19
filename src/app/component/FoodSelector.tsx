@@ -24,9 +24,7 @@ function FoodSelector() {
 
     // Fetch med RTK Query med useGetRestaurantsQuery 
 
-    const { data: restaurants, error, isLoading} = useGetRestaurantsQuery(undefined);
-
-    console.log(restaurants)
+    const { data, error, isLoading} = useGetRestaurantsQuery();
 
     //if (isLoading) return <div>Loading...</div>;
 
@@ -36,7 +34,7 @@ function FoodSelector() {
     // Hämtar nuvarande state
     const foodState = useSelector((state: RootState) => state.foodSelection)
 
-    const filteredData = restaurants?.filter((item: Restaurant) => {
+    const filteredData = data.restaurants?.filter((item: Restaurant) => {
         return item.tags.includes(foodState.place) && item.tags.includes(foodState.cuisine) && item.tags.includes(foodState.meal);
     })
 
