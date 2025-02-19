@@ -1,3 +1,5 @@
+  // @ts-nocheck
+/* eslint-disable */
 "use client"
 
 import { useDispatch, useSelector } from 'react-redux'
@@ -24,19 +26,6 @@ const places = [
 
 function FoodSelector() {
 
-    const { data: restaurants, isLoading, error } = useGetRestaurantsQuery(undefined);
-
-     //if (isLoading) return <div>Loading...</div>;
-
-    console.log(restaurants?.data);
-
-  
-    const dispatch = useDispatch()
-    const foodState = useSelector((state: RootState) => state.foodSelection)
-
-    const filteredRestaurants = restaurants?.data.filter((restaurant: Restaurant) => {
-        return restaurant.tags.includes(foodState.place) && restaurant.tags.includes(foodState.eat) && restaurant.tags.includes(foodState.meal);
-    });
 
 
     return (
@@ -46,8 +35,8 @@ function FoodSelector() {
                     <label htmlFor="place" className="sr-only">Var vill du äta?</label>
                     <select 
                         id="place"
-                        value={foodState.place}
-                        onChange={(e) => dispatch(updatePlace(e.target.value))}
+                        value={}
+                        onChange={}
                         className="w-full"
                     >
                         <option value="">Var vill du äta?</option>
@@ -63,8 +52,8 @@ function FoodSelector() {
                     <label htmlFor="food" className="sr-only">Vad vill du äta?</label>
                     <select
                         id="food"
-                        value={foodState.eat}
-                        onChange={(e) => dispatch(updateEat(e.target.value))}
+                        value={}
+                        onChange={}
                         className="w-full"
                     >
                         <option value="">Vad vill du äta?</option>
@@ -80,8 +69,8 @@ function FoodSelector() {
                     <label htmlFor="meal" className="sr-only">När vill du äta?</label>
                     <select
                         id="meal"
-                        value={foodState.meal}
-                        onChange={(e) => dispatch(updateMeal(e.target.value))}
+                        value={}
+                        onChange={}
                         className="w-full"
                     >
                         <option value="">När vill du äta?</option>
@@ -94,9 +83,7 @@ function FoodSelector() {
                 </div>
             </div>
             <div>
-                {filteredRestaurants?.map((restaurant: Restaurant) => (
-                    <div key={restaurant.name}>{restaurant.name}</div>
-                ))}
+                    {/* Filtered restaurants */}
             </div>
         </div>
     )
