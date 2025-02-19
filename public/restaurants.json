@@ -1,5 +1,5 @@
 {
-    "data": [
+    "restaurants": [
         {
             "name": "Restaurang 1",
             "tags": ["Södermalm", "Asiatisk", "Frukost"]
